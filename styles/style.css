@@ -1,0 +1,216 @@
+:root{
+    --bg:rgb(59,70,100);
+    --bg-results: rgb(24,31,50);
+    --bg-keys-pad:rgb(37,45,68);
+    --bg-key:rgb(234,227,219);
+    --bg-key-shadow:rgb(182,163,153);
+    --bg-key-del:rgb(100,113,153);
+    --bg-key-del-shadow: rgb(66,78,115);
+    --keys-color-th1:rgb(70,75,94);
+    --bg-key-equals: rgb(209,63,48);
+    --bg-key-equals-shadow: rgb(144,34,25);
+}
+
+body{
+    background-color: var(--bg);
+    font-family: 'Spartan', sans-serif;
+    color: white;
+    font-size: 32px;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+.flex-calculator{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    padding: 5% 25% 5% 25%;
+}
+.header{
+    display:flex;
+    justify-content: space-between;
+}
+
+.calcu{
+    font-size: 35px;
+}
+
+.temaContainer{
+    display: inline-flex;
+    align-items:flex-end;
+}
+
+.textoTema{
+    margin: 0px 20px 15px 0px;
+    font-size: 15px;
+}
+
+.numeroTemaContainer{
+    display: flex;
+    justify-content: space-around;
+}
+.numeroTema{
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+}
+/* --------- CSS DEL INPUT RANGE ----------------- */
+
+ input[type=range] {
+    -webkit-appearance: none;
+    background-color: transparent;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    height: 30px;
+    cursor: pointer;
+    background: rgb(37,45,68);
+    border-radius: 15px;
+    padding: 6px;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    height: 18px;
+    width: 18px;
+    border-radius: 10px;
+    background: rgb(213,61,51);
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+  input[type=range]::-moz-range-track {
+    height: 30px;
+    cursor: pointer;
+    background: rgb(37,45,68);
+    border-radius: 15px;
+    padding: 6px;
+  }
+  input[type=range]::-moz-range-thumb {
+    height: 18px;
+    width: 18px;
+    border-radius: 10px;
+    background: rgb(213,61,51);
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    height: 30px;
+    padding: 6px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: rgb(37,45,68);
+  }
+  input[type=range]::-ms-fill-upper {
+    background: rgb(37,45,68);
+  }
+  input[type=range]::-ms-thumb {
+    height: 18px;
+    width: 18px;
+    border-radius: 10px;
+    background: rgb(213,61,51);
+    cursor: pointer;
+  }
+
+
+  /* --------- FIN DEL CSS DEL INPUT RANGE ---------- */
+
+.result-container{
+    background-color: var(--bg-results);
+    border-radius: 10px;
+}
+.keys-pad{
+    background-color: var(--bg-keys-pad);
+    border-radius: 10px;
+    padding: 4%;
+}
+.keys-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px 0px 20px 0px;
+}
+.result{
+    text-align: right;
+    margin: 1vw 2vw 1vw 0vw;
+}
+.number{
+    border-radius: 5px;
+    width: 100%;
+    color: var(--keys-color-th1);
+    background-color: var(--bg-key);
+    box-shadow: var(--bg-key-shadow) 0px 4px 0px;
+    cursor: pointer;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+}
+.key-del{
+    border-radius: 5px;
+    width: 100%;
+    background-color: var(--bg-key-del);
+    box-shadow: var(--bg-key-del-shadow) 0px 4px 0px;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+    
+    cursor: pointer;
+}
+.key-reset{
+    border-radius: 5px;
+    width: 100%;
+    background-color: var(--bg-key-del);
+    box-shadow: var(--bg-key-del-shadow) 0px 4px 0px;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+    
+    cursor: pointer;
+}
+.key-equals{
+    border-radius: 5px;
+    width: 100%;
+    background-color: var(--bg-key-equals);
+    box-shadow: var(--bg-key-equals-shadow) 0px 4px 0px;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+    
+    cursor: pointer;
+}
+.margen-boton{
+    padding: 0px 20px 0px 20px;
+    width: 100%;
+}
+
+/*  */
+
+@media (max-width: 992px) {
+    .margen-boton{
+        padding: 0px 10px 0px 10px;
+    } 
+    .flex-calculator{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+        padding: 5% 5% 5% 5%;
+    }
+}
